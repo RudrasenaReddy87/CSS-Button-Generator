@@ -1,0 +1,179 @@
+/* Button13linkstyle.css - Optimized Version */
+:root {
+  --btn-blob-color: #ff9500;
+  --btn-text-color: #000000;
+  --btn-border-width: 2px;
+  --btn-bg-color: #ffffff;
+  --btn-hover-bg: #fffffe;
+  --btn-inner-bg: #62ff00;
+  --btn-shadow-color: rgba(255, 255, 255, 0.116);
+  --btn-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button13link-container {
+  display: inline-block;
+  position: relative;
+  margin: 0.5rem;
+  isolation: isolate;
+}
+
+.button13link-main {
+  position: relative;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--btn-text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--btn-bg-color);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Fredoka One", cursive, system-ui;
+  transition: var(--btn-transition);
+  box-shadow: 5px 5px 10px var(--btn-shadow-color);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* SVG Icon Styles */
+.button13link-main .svgIcon {
+  height: 1.75em;
+  width: 1.75em;
+  transition: transform 1.5s ease;
+  flex-shrink: 0;
+}
+
+/* Hover & Active States */
+.button13link-main:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+.button13link-main:hover .svgIcon {
+  transform: rotate(250deg);
+}
+
+.button13link-main:active {
+  transform: scale(0.97);
+}
+
+/* Border Effect */
+.button13link-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: var(--btn-border-width) solid var(--btn-blob-color);
+  border-radius: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Inner Blob Container */
+.button13link-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: var(--btn-inner-bg);
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Blob Elements */
+.button13link-blobs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: url('#button13link-filter');
+}
+
+.button13link-blob {
+  position: absolute;
+  top: var(--btn-border-width);
+  width: 25%;
+  height: 100%;
+  background: var(--btn-blob-color);
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Blob Positioning */
+.button13link-blob:nth-child(1) { 
+  left: 0%; 
+  transition-delay: 0s; 
+}
+.button13link-blob:nth-child(2) { 
+  left: 25%; 
+  transition-delay: 0.08s; 
+}
+.button13link-blob:nth-child(3) { 
+  left: 50%; 
+  transition-delay: 0.16s; 
+}
+.button13link-blob:nth-child(4) { 
+  left: 75%; 
+  transition-delay: 0.24s; 
+}
+
+/* Hover Blob Animation */
+.button13link-main:hover .button13link-blob {
+  transform: translate3d(0, 0, 0) scale(1.7);
+}
+
+/* SVG Filter Container (Hidden) */
+.button13link-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Accessibility Improvements */
+.button13link-main:focus-visible {
+  outline: 2px solid var(--btn-blob-color);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .button13link-main,
+  .button13link-main .svgIcon,
+  .button13link-blob {
+    transition: none !important;
+  }
+  
+  .button13link-main:hover .svgIcon {
+    transform: none;
+  }
+  
+  .button13link-main:active {
+    transform: none;
+  }
+}
+
+/* Performance Optimizations */
+@supports (filter: url('#button13link-filter')) {
+  .button13link-blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+  
+  .button13link-main:hover .button13link-blob {
+    transform: translate3d(0, 0, 0) scale(1.4);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .button13link-main {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .button13link-main .svgIcon {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}

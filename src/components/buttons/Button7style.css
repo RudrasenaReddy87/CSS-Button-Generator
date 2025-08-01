@@ -1,0 +1,66 @@
+/* Button7 style*/
+.button7-glow-btn {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 0px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.button7-icon {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button7-glow-btn:hover {
+  transform: scale(10.3s);
+  border-color: #fff9;
+}
+
+
+
+.button7-glow-btn:hover::before {
+  animation: button7-shine 1.2s ease-out infinite;
+}
+
+.button7-glow-btn::before {
+  content: "";
+  position:absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes button7-shine {
+  0% {
+    left: -100px;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

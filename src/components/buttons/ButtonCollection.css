@@ -1,0 +1,272 @@
+/* ButtonCollection.css */
+
+
+/* Button 1 - Depth Press */
+.button-depth {
+  appearance: button;
+  background-color: #1a8fe3;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-depth:after {
+  background-clip: padding-box;
+  background-color: #2bb7ff;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-depth:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.button-depth:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+/* Button 2 - Color Flip */
+.button-flip {
+  background: #FF5A5F;
+  border: 1px solid #FF5A5F;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.button-flip:hover,
+.button-flip:active {
+  background-color: initial;
+  color: #FF5A5F;
+}
+
+.button-flip:active {
+  opacity: .5;
+}
+
+/* Button 3 - Soft Lift */
+.button-lift {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #E2E2F0 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-lift:focus {
+  box-shadow: #E2E2F0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #E2E2F0 0 -3px 0 inset;
+}
+
+.button-lift:hover {
+  box-shadow: rgba(45, 35, 66, 0.2) 0 4px 8px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #E2E2F0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-lift:active {
+  box-shadow: #E2E2F0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Button 4 - Pixel Press */
+.button-pixel {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-pixel:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-pixel:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+/* Button 5 - Hand Drawn */
+.button-handdrawn {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button-handdrawn:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+/* Button 6 - 3D Push */
+.button-3d {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+}
+
+.button-3d-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-3d-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-3d-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-3d:hover .button-3d-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-3d:active .button-3d-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-3d:hover .button-3d-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-3d:active .button-3d-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}

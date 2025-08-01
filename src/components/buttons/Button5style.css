@@ -1,0 +1,133 @@
+/* Button 5 */
+.button5-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "button5-bt1 button5-bt2 button5-bt3"
+                       "button5-bt4 button5-bt5 button5-bt6";
+  position: relative;
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button5-container:active {
+  transform: scale(0.95);
+}
+
+.button5-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.button5-bt1 { grid-area: button5-bt1; }
+.button5-bt2 { grid-area: button5-bt2; }
+.button5-bt3 { grid-area: button5-bt3; }
+.button5-bt4 { grid-area: button5-bt4; }
+.button5-bt5 { grid-area: button5-bt5; }
+.button5-bt6 { grid-area: button5-bt6; }
+
+.button5-bt1:hover ~ .button5-btn {
+  transform: rotateX(15deg) rotateY(-15deg);
+  box-shadow: -2px -2px #18181888;
+}
+.button5-bt1:hover ~ .button5-btn::after {
+  animation: button5-shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.button5-bt3:hover ~ .button5-btn {
+  transform: rotateX(15deg) rotateY(15deg);
+  box-shadow: 2px -2px #18181888;
+}
+.button5-bt3:hover ~ .button5-btn::after {
+  animation: button5-shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.button5-bt4:hover ~ .button5-btn {
+  transform: rotateX(-15deg) rotateY(-15deg);
+  box-shadow: -2px 2px #18181888;
+}
+.button5-bt4:hover ~ .button5-btn::after {
+  animation: button5-shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.button5-bt6:hover ~ .button5-btn {
+  transform: rotateX(-15deg) rotateY(15deg);
+  box-shadow: 2px 2px #18181888;
+}
+.button5-bt6:hover ~ .button5-btn::after {
+  animation: button5-shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.button5-hover:hover ~ .button5-btn::before {
+  background: transparent;
+}
+
+.button5-hover:hover ~ .button5-btn::after {
+  content: "Click";
+  top: -90%;
+  transform: translate(-50%, );
+  font-size: 28px;
+  color: #0bbc11;
+}
+
+.button5-btn {
+  position: absolute;
+  padding: 5;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #ff0afb;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button5-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5bd05;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.button5-btn::after {
+  content: "Hover";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #0bbc11;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes button5-shake {
+  0%   { left: 48%; }
+  25%  { left: 56%; }
+  50%  { left: 49%; }
+  75%  { left: 54%; }
+  100% { left: 59%; }
+}

@@ -1,0 +1,65 @@
+/* Authour : Rudrasena Reddy */
+/* 🇮🇳 India Button */
+.custom-flag-button {
+  font-size: 17px;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  color: orange;
+  background: linear-gradient(
+    to bottom,
+    #f8aa01 0%,
+    #ffffff 50%,
+    #18b40a 100%
+  );
+  box-shadow:
+    rgba(108, 12, 12, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all 0.1s ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.custom-flag-button:active {
+  transform: translateY(3px);
+  box-shadow:
+    rgba(148, 5, 5, 0.1) 0px 14px 25px -5px,
+    rgba(2, 151, 121, 0.04) 0px 10px 10px -5px;
+}
+
+.custom-flag-button .button-content {
+  display: flex;
+  align-items: center;
+  background: rgb(251, 251, 253);
+  padding: 0.7em 1.5em;
+  padding-left: 1.2em;
+  border-radius: 16px;
+}
+
+.custom-flag-button svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  color: #ff8103;
+  transition: transform 0.3s;
+}
+
+.custom-flag-button:hover svg {
+  transform: scale(1.2);
+}
+
+.custom-flag-button .button-content span {
+  transition: transform 0.s ease;
+}
+
+.custom-flag-button:hover .button-content span {
+  transform: translateX(4px);
+}
+
+@keyframes pulse {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,86 @@
+/* laststyle.css */
+.social-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-item {
+  position: relative;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.75rem;
+  color: #2d3748;
+  background: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Expanded hover area */
+.hover-area {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: 1;
+}
+
+/* Color-specific hover effects */
+.social-link.email:hover { background: #D44638; color: white; }
+.social-link.linkedin:hover { background: #0077B5; color: white; }
+.social-link.instagram:hover { 
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+.social-link.github:hover { background: #333; color: white; }
+
+/* Hover effects */
+.social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip styling */
+.social-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.social-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: 120%;
+}

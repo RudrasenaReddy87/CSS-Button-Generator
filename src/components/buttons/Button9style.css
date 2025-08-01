@@ -1,0 +1,121 @@
+/* Button9 - Floating Glowing Stars (No Rotation) */
+
+.button9-btn {
+  position: relative;
+  padding: 16px 42px;
+  background: #111;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 2px solid #014ccf;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 10px #00ffe155, 0 0 20px #00ffe122;
+}
+
+.button9-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, #00f0ff, #ff00c8);
+  z-index: -1;
+  opacity: 0.25;
+  filter: blur(20px);
+  transition: 0.4s ease-in-out;
+}
+
+/* Stars hidden initially */
+.button9-star-1,
+.button9-star-2,
+.button9-star-3,
+.button9-star-4,
+.button9-star-5,
+.button9-star-6 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  z-index: 2;
+  fill: #0ff;
+  stroke: #00eaff;
+  stroke-width: 2;
+  pointer-events: none;
+  transform: scale(0.3);
+  transition: all 0.4s ease;
+}
+
+/* Base positions */
+.button9-star-1 { top: 30%; left: 30%; }
+.button9-star-2 { top: 50%; left: 50%; }
+.button9-star-3 { top: 20%; left: 80%; }
+.button9-star-4 { top: 60%; left: 20%; }
+.button9-star-5 { top: 70%; left: 55%; }
+.button9-star-6 { top: 10%; left: 70%; }
+
+/* On hover */
+.button9-btn:hover {
+  background: #000000;
+  color: #00ffe1;
+  box-shadow: 0 0 20px #12dfc7aa, 0 0 40px #b3078de2;
+  border-color: #053853;
+}
+
+.button9-btn:hover::before {
+  opacity: 0.5;
+}
+
+/* Stars glow and float out slightly */
+.button9-btn:hover .button9-star-1 {
+  opacity: 2;
+  transform: translate(-50px, -90px) scale(5);
+  animation: star-float 0s ease-in-out infinite;
+}
+
+.button9-btn:hover .button9-star-2 {
+  opacity: 1;
+  transform: translate(20px, -16px) scale(1.1);
+  animation: star-float 2.2s ease-in-out infinite;
+}
+
+.button9-btn:hover .button9-star-3 {
+  opacity: 1;
+  transform: translate(-1px, 2px) scale(1);
+  animation: star-float 2.4s ease-in-out infinite;
+}
+
+.button9-btn:hover .button9-star-4 {
+  opacity: 1;
+  transform: translate(10px, 25px) scale(1.1);
+  animation: star-float 1s ease-in-out infinite;
+}
+
+.button9-btn:hover .button9-star-5 {
+  opacity: 1;
+  transform: translate(-25px, 10px) scale(1.1);
+  animation: star-float 2.8s ease-in-out infinite;
+}
+
+.button9-btn:hover .button9-star-6 {
+  opacity: 1;
+  transform: translate(30px, -20px) scale(1.1);
+  animation: star-float 3s ease-in-out infinite;
+}
+
+/* Floating star animation */
+@keyframes star-float {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}

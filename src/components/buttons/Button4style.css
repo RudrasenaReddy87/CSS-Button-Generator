@@ -1,0 +1,69 @@
+/* Button4 style */
+
+.button4-btn {
+  background-color: #f2f7fa;
+  width: 100px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition-duration: 700ms;
+  position: relative;
+}
+
+.button4-btn span:first-child {
+  color: #546678;
+  position: absolute;
+  transform: translate(-50%, -65%);
+  left: 50%;
+  top: 50%;
+  transition: all 0.5s ease;
+}
+
+.button4-btn span:last-child {
+  position: absolute;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(100%) translateX(-50%);
+  left: 50%;
+  top: 50%;
+  height: 14px;
+  line-height: 13px;
+  transition: all 0.5s ease;
+}
+
+.button4-btn:focus {
+  background-color: #0370ff;
+  width: 120px;
+  height: 40px;
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+}
+
+.button4-btn:focus span:first-child {
+  color: #d0e0fd;
+  transform: translateX(-50%) translateY(-150%);
+  opacity: 0;
+}
+
+.button4-btn:focus span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition-delay: 300ms;
+}
+
+.button4-centralize {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button4-description {
+  margin-top: 10px;
+  color: #b5ccf3;
+}
