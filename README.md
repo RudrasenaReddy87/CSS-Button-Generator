@@ -1,3 +1,9 @@
+# CSS Button Generator
+
+[![Deploy Status](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen?style=flat-square&logo=github)](https://rudrasenareddy87.github.io/CSS-Button-Generator/)
+
+A collection of beautiful and customizable CSS buttons with live previews and easy copy-paste code.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
