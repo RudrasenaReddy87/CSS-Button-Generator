@@ -26,6 +26,18 @@ Users can also submit their own button designs, making it a collaborative space 
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 
+## Installation
+make sure you have node.js after that then perform the operations.
+1. Clone the repository
+git clone https://github.com/RudrasenaReddy87/CSS-Button-Generator.git
+2. Navigate to the project directory
+cd CSS-Button-Generator
+3. Install the dependencies
+npm install
+4. Start the development server
+npm run dev
+
+
 
 # React + Vite
 
