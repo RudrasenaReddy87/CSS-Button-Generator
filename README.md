@@ -5,7 +5,16 @@
 
 
 
-A collection of beautiful and customizable CSS buttons with live previews and easy copy-paste code.
+## 🎯 Project Description
+
+**CSS Button Generator** is a modern, fully responsive web application built with **React**, **Vite**, and **Tailwind CSS**, designed to showcase a curated collection of beautiful and interactive CSS buttons. Each button is implemented as a reusable React component and styled independently, allowing for modular updates and easy contributions.
+
+This project is ideal for frontend developers, designers, and enthusiasts looking for inspiration or ready-to-use button styles for their web projects. It features a gallery layout, live previews, copy-to-clipboard functionality, and is optimized for both desktop and mobile experiences.
+
+Users can also submit their own button designs, making it a collaborative space for UI creativity.
+
+---
+
 
 # React + Vite
 
