@@ -1,6 +1,8 @@
 # CSS Button Generator
 
 [![Deploy Status](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen?style=flat-square&logo=github)](https://rudrasenareddy87.github.io/CSS-Button-Generator/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-View_Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rudrasenareddy/)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rudrasenareddy87@gmail.com)
 
 A collection of beautiful and customizable CSS buttons with live previews and easy copy-paste code.
 
