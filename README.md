@@ -2,6 +2,9 @@
 
 [![Deploy Status](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen?style=flat-square&logo=github)](https://rudrasenareddy87.github.io/CSS-Button-Generator/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rudrasenareddy/)
+![GitHub repo size](https://img.shields.io/github/repo-size/RudrasenaReddy87/CSS-Button-Generator?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/RudrasenaReddy87/CSS-Button-Generator?style=social)
+![License](https://img.shields.io/github/license/RudrasenaReddy87/CSS-Button-Generator?style=flat-square)
 
 
 
